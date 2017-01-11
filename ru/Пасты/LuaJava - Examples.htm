@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app8.us.archive.org";archive_analytics.values.server_ms=239;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+	<title>LuaJava - A Script Tool for Java</title>
+    <link rel="stylesheet" href="/web/20150107122051cs_/http://www.keplerproject.org/doc.css" type="text/css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.keplerproject.org/luajava/examples.html";
+
+var firstYear = 1996;
+var displayDay = "7";
+var displayMonth = "Янв.";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(525, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.keplerproject.org/luajava/examples.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150107122051" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20141107071756/http://www.keplerproject.org/luajava/examples.html" title="7 ноя 2014">НОЯБ.</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 12:20:51 янв 7, 2015">ЯНВ.</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Февр.
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20141207174206/http://www.keplerproject.org/luajava/examples.html" title="17:42:06 дек 7, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 12:20:51 янв 7, 2015">7</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20140103145016/http://www.keplerproject.org/luajava/examples.html" title="3 янв 2014"><strong>2014</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 12:20:51 янв 7, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150107122051*/http://www.keplerproject.org/luajava/examples.html" title="See a list of every capture for this URL">45 captures</a>
+           <div class="r" title="Timespan for captures of this URL">24 авг 04 - 7 янв 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="525"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=525_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000010100_2005:-1:110110010000_2006:-1:000000001000_2007:-1:000000010000_2008:-1:000010001000_2009:-1:111110101001_2010:-1:100000000101_2011:-1:012000001000_2012:-1:100001110000_2013:-1:000010101110_2014:-1:110101110111_2015:0:100000000000_2016:-1:000000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"><a href="/web/20150107122051/http://www.keplerproject.org/">
+		<img alt="LuaJava" src="luajava_128.png"/>
+	</a></div>
+	<div id="product_name"><big><b>LuaJava</b></big></div>
+	<div id="product_description">A Script Tool for Java</div>
+</div> <!-- id="product" -->
+
+<div id="main">
+<div id="navigation">
+	
+<h1>LuaJava</h1>
+	<ul>
+		<li><a href="index.html">Home</a>
+			<ul>
+				<li><a href="index.html#overview">Overview</a></li>
+				<li><a href="index.html#status">Status</a></li>
+				<li><a href="index.html#dependencies">Dependencies</a></li>
+				<li><a href="index.html#download">Download</a></li>
+				<li><a href="index.html#credits">Credits</a></li>
+				<li><a href="index.html#contact">Contact us</a></li>
+			</ul>
+		</li>
+		<li><a href="manual.html">Manual</a>
+			<ul>
+				<li><a href="manual.html#compile">Compiling</a></li>
+				<li><a href="manual.html#install">Installing</a></li>
+				<li><a href="manual.html#console">Java Console</a></li>
+				<li><a href="manual.html#luareference">Lua Reference</a></li>
+				<li><a href="manual.html#javareference">Java Reference</a></li>
+			</ul>
+		</li>
+		<li><strong>Examples</strong></li>
+		<li><a href="history.html">History</a></li>
+    <li><a href="/web/20150107122051/http://luaforge.net/projects/luajava/">Project</a>
+       <ul>
+          <li><a href="/web/20150107122051/http://luaforge.net/tracker/?group_id=10">Bug Tracker</a></li>
+          <li><a href="/web/20150107122051/http://luaforge.net/scm/?group_id=10">CVS</a></li>
+       </ul>
+    </li>
+		<li><a href="license.html">License</a></li>
+	</ul>
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h2>Examples</h2>
+
+<h4>Hello World using LuaJava</h4>
+
+<p>This example is a simple Hello World application using LuaJava printing both from Lua and Java.</p>
+
+<p><code>Hello.java</code></p>
+<pre class="example">public class Hello
+{
+  public static void main(String[] args)
+  {
+    LuaState L = LuaStateFactory.newLuaState();
+    L.openLibs();
+    
+    L.LdoFile("hello.lua");
+    
+    System.out.println("Hello World from Java!");
+  }
+}
+</pre>
+
+<p><code>hello.lua</code></p>
+
+<pre class="example">print("Hello World from Lua!")
+</pre>
+
+<h4>Accessing a DataBase</h4>
+
+<p>This example uses Java JDBC to access a database from Lua.</p>
+
+<p><code>TestJDBC.java</code></p>
+<pre class="example">public class TestJDBC
+{
+  
+  public static void main(String[] args) throws Exception
+  {
+    // gets a java.sql.Connection and creates a Statement
+
+    Class.forName("org.hsqldb.jdbcDriver");
+    Connection con = DriverManager.getConnection(
+	                    "jdbc:hsqldb:hsql://localhost:9002",
+	                    "sa", "");
+    Statement st = con.createStatement();
+    
+    try
+    {
+      st.execute("DROP TABLE luatest");
+    }
+    catch (Exception ignore) {}
+    
+    st.execute([[CREATE TABLE luatest 
+               (id int not null primary key, 
+               str varchar, number double)]]);
+    
+    for(int i = 0 ; i &lt; 10 ; i++)
+    {
+      st.executeUpdate(
+          "INSERT INTO luatest (id, str, number) values(" + 
+          i + ", '" + 2*i + "', " + 
+          System.currentTimeMillis() + ")");
+    }
+    
+    // creates a Lua State and register the basic libraries
+    
+    LuaState L = LuaStateFactory.newLuaState();
+    L.openLibs();
+    
+    // registers the statement in the global 'st'
+    
+    L.pushObjectValue(st);
+    L.setGlobal("st");
+    
+    // execute file testJDBC.lua
+    
+    int err = L.LdoFile("testJDBC.lua");
+
+    L.close();
+    st.close();
+    con.close();
+  }
+}
+</pre>
+
+
+<p><code>testJDBC.lua</code></p>
+<pre class="example">do
+-- tests if object Statement is nil
+if st == nil then
+    print("Error. st object is nil")
+    return
+end
+
+local st = st
+_G.st = nil
+
+function createSQLProxy(t)
+
+    local tableName = t
+    
+    local function i (t,k)
+    
+        local id = tonumber(k)
+        if not id then
+            return nil
+        end
+        
+        local function mi (t,k)
+        
+            local sql = "select "..k.." from "..
+                        tableName.." where id="..id
+            local rs = st:executeQuery(sql)
+            if not rs:next() then
+                rs:close()
+                return nil
+            end
+            
+            local res = rs:getString(1)
+            rs:close()
+            
+            return res
+        end
+        
+        local res = {}
+        setmetatable(res, {__index = mi})
+        return res
+    end
+    
+    local res = {}
+    setmetatable(res, {__index = i })
+    return res
+end
+
+end
+
+
+proxy = createSQLProxy("luatest")
+
+print(proxy[1].str)
+print(proxy[1].number)
+
+</pre>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+
+<div id="about">
+	<p><a href="/web/20150107122051/http://validator.w3.org/check?uri=referer">
+    <img src="/web/20150107122051im_/http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+      <p><small>$Id: examples.html,v 1.17 2007/01/23 22:37:28 thiago Exp $</small></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html> 
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:20:51 янв 7, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:33:26 мар 11, 2016.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=91;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+	<title>LuaJava - A Script Tool for Java</title>
+    <link rel="stylesheet" href="/web/20150124024238cs_/http://www.keplerproject.org/doc.css" type="text/css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.keplerproject.org/luajava/manual.html";
+
+var firstYear = 1996;
+var displayDay = "24";
+var displayMonth = "Янв.";
+var displayYear = "2015";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(525, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.keplerproject.org/luajava/manual.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150124024238" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20141223192043/http://www.keplerproject.org/luajava/manual.html" title="23 дек 2014">ДЕК.</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 2:42:38 янв 24, 2015">ЯНВ.</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Февр.
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20141223192043/http://www.keplerproject.org/luajava/manual.html" title="19:20:43 дек 23, 2014"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 2:42:38 янв 24, 2015">24</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20131120104238/http://www.keplerproject.org/luajava/manual.html" title="20 ноя 2013"><strong>2013</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 2:42:38 янв 24, 2015">2015</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2016
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20150124024238*/http://www.keplerproject.org/luajava/manual.html" title="See a list of every capture for this URL">87 captures</a>
+           <div class="r" title="Timespan for captures of this URL">28 авг 04 - 24 янв 15</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="525"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=525_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000010000_2005:-1:010100012000_2006:-1:000000001000_2007:-1:000000010000_2008:-1:000121001101_2009:-1:111110101001_2010:-1:100101111211_2011:-1:210111111111_2012:-1:c01111110111_2013:-1:101210111110_2014:-1:010111110211_2015:0:100000000000_2016:-1:000000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"><a href="/web/20150124024238/http://www.keplerproject.org/">
+		<img alt="LuaJava" src="luajava_128.png"/>
+	</a></div>
+	<div id="product_name"><big><b>LuaJava</b></big></div>
+	<div id="product_description">A Script Tool for Java</div>
+</div> <!-- id="product" -->
+
+<div id="main">
+<div id="navigation">
+	
+<h1>LuaJava</h1>
+	<ul>
+		<li><a href="index.html">Home</a>
+			<ul>
+				<li><a href="index.html#overview">Overview</a></li>
+				<li><a href="index.html#status">Status</a></li>
+				<li><a href="index.html#dependencies">Dependencies</a></li>
+				<li><a href="index.html#download">Download</a></li>
+				<li><a href="index.html#credits">Credits</a></li>
+				<li><a href="index.html#contact">Contact us</a></li>
+			</ul>
+		</li>
+		<li><strong>Manual</strong>
+			<ul>
+				<li><a href="manual.html#compile">Compiling</a></li>
+				<li><a href="manual.html#install">Installing</a></li>
+				<li><a href="manual.html#console">Java Console</a></li>
+				<li><a href="manual.html#luareference">Lua Reference</a></li>
+				<li><a href="manual.html#javareference">Java Reference</a></li>
+			</ul>
+		</li>
+		<li><a href="examples.html">Examples</a></li>
+		<li><a href="history.html">History</a></li>
+    <li><a href="/web/20150124024238/http://luaforge.net/projects/luajava/">Project</a>
+       <ul>
+          <li><a href="/web/20150124024238/http://luaforge.net/tracker/?group_id=10">Bug Tracker</a></li>
+          <li><a href="/web/20150124024238/http://luaforge.net/scm/?group_id=10">CVS</a></li>
+       </ul>
+    </li>
+		<li><a href="license.html">License</a></li>
+	</ul>
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<p>LuaJava was tested with Windows and Linux platafforms using Java JDK 1.4.
+LuaJava is JDK 1.4 or higher compatible.</p>
+
+<h2><a name="compile"></a>Compiling</h2>
+
+<p>LuaJava source distribution includes a Windows nmakefile and a Linux makefile.
+Edit the <code>config</code> file to point to your JDK, Lua directories and C libraries
+and compilers.</p>
+
+<h3>Windows</h3>
+
+<p>LuaJava can be compiled for Windows using <em>nmake</em> from <em>MSVC++</em>.
+To do that, run the <code>VCVARS32.BAT</code> command before running nmake:</p>
+
+<pre class="example">
+c:\luajava-1.1&gt;&quot;drive:\complete_path_to\VCVARS32.bat&quot;
+c:\luajava-1.1&gt;nmake -f nmakefile
+</pre>
+
+<h3>Linux</h3>
+
+<p>To compile LuaJava for Linux and OSX just do:</p>
+
+<pre class="example">
+make
+</pre>
+
+
+<h2><a name="install"></a>Installing</h2>
+
+<p>LuaJava compilation generates two files: <code>luajava-1.1.jar</code> and 
+<code>luajava-1.1.dll</code> (or <code>libluajava-1.1.so</code> in Unix, or 
+<code>libluajava-1.1.jnilib</code> in MacOSX).
+</p>
+
+<dl>
+<dt><strong>luajava-1.1.jar</strong></dt>
+<dd>This file must be copied to a path in the java application CLASSPATH.</dd>
+
+<dt><strong>luajava-1.1.dll (or libluajava-1.1.so or libluajava-1.1.jnilib)</strong></dt>
+<dd>This file must be copied to a path in your system path, that depends on your OS. 
+Windows users can place it in the JRE bin directory, or the windows system folder. Unix
+users can place it in the JRE bin directory or a directory pointed by LD_LIBRARY_PATH 
+environment variable.</dd>
+</dl>
+
+
+<h2><a name="console"></a>Running the LuaJava Console</h2>
+
+<p>LuaJava is distributed with a simple console. To run it type :</p>
+
+<pre class="example">
+c:\luajava-1.1&gt;java -cp &quot;luajava-1.1.jar&quot;
+       org.keplerproject.luajava.Console
+</pre>
+
+
+<h2><a name="luareference"></a>Lua Reference</h2>
+
+<p>
+One of the goals of LuaJava is to allow the programmer to manipulate Java objects in
+the same way as it manipulates native (Lua) objects. Lua, like most interpreted languages,
+is dynamically typed. Variables have no type. Instead, each value carries its own type with it.
+Lua has no declarations, instead variables may contain any value of the language.
+
+LuaJava creates a library in Lua called <code>luajava</code>. This library offers 5 functions:
+</p>
+
+<dl>
+
+    <dt><strong>newInstance(className, ...)</strong></dt>
+    <dd><p>This function creates a new Java object, and returns a Lua object that is a reference
+    to the actual Java object. You can access this object with the regular syntax used to access
+    object oriented functions in Lua objects.</p>
+    <p>The first parameter is the name of the class to be instantiated. The other parameters are
+    passed to the Java Class constructor.</p>
+    <p>Example:</p>
+
+<pre class="example">
+obj = luajava.newInstance("java.lang.Object")
+-- obj is now a reference to the new object
+-- created and any of its methods can be accessed.
+
+-- this creates a string tokenizer to the "a,b,c,d"
+-- string using "," as the token separator.
+strTk = luajava.newInstance("java.util.StringTokenizer", 
+    "a,b,c,d", ",")
+while strTk:hasMoreTokens() do
+    print(strTk:nextToken())
+end
+
+</pre>
+
+<p>The code above should print the following on the screen:</p>
+
+
+<pre class="example">
+a
+b
+c
+d
+</pre>
+        </dd>
+
+    <dt><strong>bindClass(className)</strong></dt>
+    <dd><p>This function retrieves a Java class corresponding to <code>className</code>.
+    The returned object can be used to access static fields and methods of the
+    corresponding class.</p>
+    <p>Example:</p>
+<pre class="example">
+sys = luajava.bindClass("java.lang.System")
+print ( sys:currentTimeMillis() )
+
+-- this prints the time returned by the function.
+</pre>
+    </dd>
+
+    <dt><strong>new(javaClass)</strong></dt>
+    <dd><p>This function receives a java.lang.Class and returns a new instance of this class.</p>
+    <p><code>new</code> works just like <code>newInstance</code>, but the first argument is an
+    instance of the class.</p>
+    <p>Example:</p>
+
+<pre class="example">
+str = luajava.bindClass("java.lang.String")
+strInstance = luajava.new(str)
+</pre>
+
+    </dd>
+
+    <dt><strong>createProxy(interfaceNames, luaObject)</strong></dt>
+    <dd><p>We can also, instead of creating a Java object to be manipulated by Lua, create a Lua
+    object that will be manipulated by Java. We can do that in LuaJava by creating a <em>proxy</em>
+    to that object. This is done by the createProxy function.</p>
+    <p>The function <code>createProxy</code> returns a java Object reference that can be used as an
+    implementation of the given interface.</p>
+    <p><code>createProxy</code> receives a string that contain the names of the interfaces to be
+    implemented, separated by a comma(,), and a lua object that is the interface implementation.</p>
+    <p>Example:</p>
+
+<pre class="example">
+button = luajava.newInstance("java.awt.Button", "execute")
+button_cb = {}
+function button_cb.actionPerformed(ev)
+ . . .
+end
+
+buttonProxy = luajava.createProxy("java.awt.ActionListener", 
+    button_cb)
+
+button:addActionListener(buttonProxy)
+</pre>
+    
+    <p>We can use Lua scripts to write implementations only for Java interfaces.</p>
+    </dd>
+    
+    <dt><strong>loadLib(className, methodName)</strong></dt>
+    <dd><p><code>loadLib</code> is a function that has a use similar to Lua's <code>loadlib</code>
+    function. The purpose of this function is to allow users to write libraries in Java and then
+    load them into Lua.</p>
+    <p>What <code>loadLib</code> does is call a static function in a given class and execute a
+    given method, which should receive LuaState as parameter. If this function returns a integer,
+    LuaJava takes it as the number of parameters returned by the the function, otherwise nothing
+    is returned.</p>
+    <p>The following Lua example can access the global <code>eg</code> created by the Java class
+    <code>test.LoadLibExample</code>:</p>
+
+<pre class="example">
+luajava.loadLib("test.LoadLibExample", "open")
+eg.example(3)
+</pre>
+
+    <p>And this Java example implements the method <code>example</code>:</p>
+
+<pre class="example">
+public static int open(LuaState L) throws LuaException
+{
+  L.newTable();
+  L.pushValue(-1);
+  L.setGlobal("eg");
+
+  L.pushString("example");
+
+  L.pushJavaFunction(new JavaFunction(L) {
+    /**
+     * Example for loadLib.
+     * Prints the time and the first parameter, if any.
+     */
+    public int execute() throws LuaException
+    {
+      System.out.println(new Date().toString());
+    
+      if (L.getTop() > 1)
+      {
+        System.out.println(getParam(2));
+      }
+
+      return 0;
+    }
+  });
+
+  L.setTable(-3);
+
+  return 1;
+}
+</pre>
+    </dd>
+
+</dl>
+
+<h2><a name="javareference"></a>Java Reference</h2>
+
+<p>The LuaJava <a href="API/index.html">Java Reference Manual</a> is generated by JavaDoc for easier browsing.</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+
+<div id="about">
+	<p><a href="/web/20150124024238/http://validator.w3.org/check?uri=referer">
+    <img src="/web/20150124024238im_/http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+      <p><small>$Id: manual.html,v 1.20 2007/01/23 22:37:28 thiago Exp $</small></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html> 
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 2:42:38 янв 24, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:32:06 мар 11, 2016.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
